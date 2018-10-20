@@ -42,10 +42,10 @@ int main(){
 			string downstreamNodeToken(cptr);
 			int downstreamNodeID = stoi(downstreamNodeToken);
 
-			if(childIndex == 0 && downstreamNodeID != - 1)
+			if((childIndex % 2) == 0 && downstreamNodeID != - 1)
 				binaryTree.assignLeftLink(upstreamNodeID, downstreamNodeID);
 
-			if(childIndex == 0 && downstreamNodeID != - 1)
+			if((childIndex % 2) == 1 && downstreamNodeID != - 1)
 				binaryTree.assignRightLink(upstreamNodeID, downstreamNodeID);
 
 			cptr = strtok(NULL, ",: ");
